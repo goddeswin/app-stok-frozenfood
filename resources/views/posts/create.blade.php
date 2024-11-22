@@ -1,6 +1,5 @@
 @extends('master.layout')
 
-
 @section('content')
 <div class="container" style="padding-top: 100px;">
     <h1>Tambah Postingan</h1>
@@ -21,6 +20,10 @@
         <div class="mb-3">
             <label for="body" class="form-label">Isi</label>
             <textarea class="form-control" id="body" name="body" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Harga</label>
+            <input type="number" class="form-control" id="price" name="price" step="0.01" min="0" placeholder="Masukkan harga">
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Gambar</label>

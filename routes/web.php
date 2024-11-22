@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth; // Make sure to import Auth facade
 
@@ -34,3 +35,5 @@ Route::get('logout', function () {
     Auth::logout();  // Add semicolon here
     return redirect()->to('/')->with('success', 'Berhasil Logout!');  // Use '->' before with()
 })->name('logout')->middleware('auth');
+
+Route::resource('categories', CategoryController::class);
