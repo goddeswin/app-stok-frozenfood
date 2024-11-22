@@ -28,7 +28,6 @@ Route::post('/store-signin', [AuthController::class, 'storeSignin'])->name('stor
 
 // Post resource routes
 Route::resource('posts', PostController::class);
-Route::get('/posts', [PostController::class, 'index'])->name('posts');
 
 // Logout route with middleware
 Route::get('logout', function () {
